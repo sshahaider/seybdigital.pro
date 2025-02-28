@@ -31,7 +31,7 @@ const backGroundVariants = cva("z--10 absolute inset-0 h-full w-full", {
 });
 
 interface BackGroundProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+  extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof backGroundVariants> {}
 
 const BackGround = React.forwardRef<HTMLDivElement, BackGroundProps>(
