@@ -5,17 +5,17 @@ import { cn } from "@/lib/utils";
 const backGroundVariants = cva("z--10 absolute inset-0 h-full w-full", {
   variants: {
     variant: {
-      grid: "bg-[linear-gradient(to_right,hsl(var(--primary)/0.1)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary)/0.1)_1px,transparent_1px)]",
+      grid: "bg-[linear-gradient(to_right,color-mix(in_oklab,var(--primary)10%,transparent)_1px,transparent_1px),linear-gradient(to_bottom,color-mix(in_oklab,var(--primary)10%,transparent)_1px,transparent_1px)]",
     },
     mask: {
       rounded:
-        "[mask-image:radial-gradient(ellipse_at_center,hsl(var(--background))_30%,transparent)]",
+        "[mask-image:radial-gradient(ellipse_at_center,var(--background)_30%,transparent)]",
       toTop:
-        "[mask-image:linear-gradient(to_bottom,hsl(var(--background)),transparent)]",
+        "[mask-image:linear-gradient(to_bottom,var(--background),transparent)]",
       toBottom:
-        "[mask-image:linear-gradient(to_bottom,transparent,hsl(var(--background)))]",
+        "[mask-image:linear-gradient(to_bottom,transparent,var(--background))]",
       topBottom:
-        "[mask-image:linear-gradient(to_bottom,transparent,hsl(var(--background)),transparent)]",
+        "[mask-image:linear-gradient(to_bottom,transparent,var(--background),transparent)]",
     },
     size: {
       sm: "bg-[size:24px_24px]",

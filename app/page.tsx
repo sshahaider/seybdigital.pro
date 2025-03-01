@@ -1,17 +1,25 @@
 import { BackGround } from "@/components/ui/background";
 import { Spotlight } from "@/components/ui/spotlight";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-[36rem] w-full items-center justify-center">
+    <div className="relative flex min-h-[100dvh] w-full items-center justify-center">
       <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="var(--primary)"
+        className="hidden md:block top-20 left-0 md:-top-20 md:left-20"
+        fill="color-mix(in oklab, var(--primary) 80%, transparent)"
       />
       <BackGround mask="rounded" size="md" />
 
-      <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
-        <h1 className=" py-4 tracking-tighter text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+      <div className="max-w-7xl p-4  mx-auto relative z-10  w-full flex flex-col items-center justify-center">
+        <Image
+          src="/logo.png"
+          alt="Logo"
+          width={200}
+          height={200}
+          className="-my-20"
+        />
+        <h1 className="py-4 tracking-tighter text-4xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-primary/20 to-primary/80">
           Coming Soon!
         </h1>
       </div>
